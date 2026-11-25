@@ -25,13 +25,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Prepare site for project URL
+      - name: Prepare website files
         run: |
           mkdir -p public
           cp -R about adhd assets create explore learning technology journal index.html 404.html favicon.svg public/
-          find public -type f -name '*.html' -exec sed -i \
-            -e 's|href="/|href="/the-infinite-detour/|g' \
-            -e 's|src="/|src="/the-infinite-detour/|g' {} +
           touch public/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
