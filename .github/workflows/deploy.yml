@@ -1,0 +1,42 @@
+name: Deploy The Infinite Detour to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare site for project URL
+        run: |
+          mkdir -p public
+          cp -R about adhd assets create explore learning technology journal index.html 404.html favicon.svg public/
+          find public -type f -name '*.html' -exec sed -i \
+            -e 's|href="/|href="/the-infinite-detour/|g' \
+            -e 's|src="/|src="/the-infinite-detour/|g' {} +
+          touch public/.nojekyll
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
