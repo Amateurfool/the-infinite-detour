@@ -885,3 +885,9 @@
 }
 .atlas-music .atlas-rabbit a.text-link:hover { color:var(--text); }
 .atlas-music-field-notes .atlas-rabbit { min-height:255px; }
+
+/* Science fiction & fantasy article accents and field-note links */
+.atlas-article-page.atlas-sf { --article-accent:var(--destination-accent); }
+.atlas-sf .atlas-rabbit a.text-link { display:inline-flex; align-items:center; gap:8px; margin-top:auto; padding-top:18px; color:var(--destination-accent); font:9px var(--font-meta); letter-spacing:.08em; text-transform:uppercase; text-decoration:none; }
+.atlas-sf .atlas-rabbit a.text-link:hover { color:var(--text); }
+.atlas-sf-field-notes .atlas-rabbit { min-height:255px; }
