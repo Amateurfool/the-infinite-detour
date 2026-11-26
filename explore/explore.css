@@ -871,3 +871,17 @@
 }
 .atlas-gaming .atlas-rabbit a.text-link:hover { color:var(--text); }
 .atlas-gaming .atlas-rabbit { min-height:255px; }
+
+
+/* Linked editorial cards in the Music field-notes trail */
+.atlas-music .atlas-rabbit a.text-link {
+  display:inline-block;
+  margin-top:auto;
+  padding-top:17px;
+  color:var(--destination-accent);
+  font:9px var(--font-meta);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.atlas-music .atlas-rabbit a.text-link:hover { color:var(--text); }
+.atlas-music-field-notes .atlas-rabbit { min-height:255px; }
