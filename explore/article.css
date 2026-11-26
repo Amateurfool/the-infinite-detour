@@ -70,13 +70,14 @@
 
 
 /* Editorial images within long-form features */
-.article-inline-figure { margin:34px 0 39px; }
+.article-inline-figure { margin:34px 0 39px; position:relative; overflow:hidden; background:var(--panel); }
 .article-inline-figure img { display:block; width:100%; max-height:430px; aspect-ratio:16/9; object-fit:cover; background:var(--panel); }
-.article-inline-figure figcaption { display:flex; flex-direction:column; align-items:flex-start; gap:5px; padding:10px 1px 0; color:var(--faint); font:8px var(--font-meta); letter-spacing:.1em; line-height:1.6; text-transform:uppercase; }
-.article-inline-figure figcaption span:last-child { color:var(--muted); padding-top:2px; }
+.article-inline-figure:after { content:""; position:absolute; inset:45% 0 0; background:linear-gradient(transparent,rgba(8,16,22,.68)); pointer-events:none; }
+.article-inline-figure figcaption { position:absolute; z-index:1; bottom:17px; left:22px; right:22px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:7px 18px; padding:0; color:rgba(255,255,255,.9); font:8px var(--font-meta); letter-spacing:.13em; line-height:1.6; text-transform:uppercase; }
+.article-inline-figure figcaption span:last-child { color:rgba(255,255,255,.76); padding:0; }
+:root[data-theme="light"] .atlas-article-page { --muted:#4b575d; --faint:#68757b; }
 @media(max-width:760px) {
  .article-inline-figure { margin:27px 0 31px; }
  .article-inline-figure img { aspect-ratio:16/10; }
- .article-inline-figure figcaption { display:flex; gap:5px; }
- .article-inline-figure figcaption span { display:block; }
+ .article-inline-figure figcaption { bottom:13px; left:14px; right:14px; gap:4px 12px; }
 }
