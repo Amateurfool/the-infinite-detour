@@ -155,3 +155,17 @@
 .wildernet-page .wildernet-universe-links a{color:var(--wild-accent);font:10px var(--font-meta);letter-spacing:.08em}
 .wildernet-page .wildernet-universe-links a:hover{color:var(--wild-teal)}
 @media(max-width:600px){.wildernet-page .wildernet-explore-nav a{padding:13px 9px;font-size:7px;letter-spacing:.08em}.wildernet-page .wildernet-faction-art{height:165px}.wildernet-page .wildernet-universe-grid,.wildernet-page .connection-branches{grid-template-columns:1fr}.wildernet-page .connection-branches:before{display:none}}
+
+
+/* Stage 4 — faction profiles and connected universe overview */
+.wildernet-page .wildernet-explore-nav a{padding-inline:clamp(12px,2vw,30px);gap:clamp(8px,1.4vw,22px)}
+.wildernet-page .wildernet-faction-art{display:block;height:145px;object-fit:cover;margin:-25px -25px 20px;width:calc(100% + 50px);max-width:none;opacity:.78}
+.wildernet-page .faction-card{min-height:340px}.wildernet-page .faction-card h3{margin-top:18px}
+.wildernet-page .wildernet-connection-map{margin:38px 0 42px;padding:clamp(18px,4vw,38px);background:linear-gradient(145deg,#111c27,#172633);border:1px solid rgba(142,182,177,.25);color:#edf0ed}
+.wildernet-page .connection-node{padding:18px;border:1px solid rgba(142,182,177,.3);background:rgba(16,24,32,.72);display:flex;flex-direction:column;gap:7px;min-width:0}
+.wildernet-page .connection-node span{font:9px var(--font-meta);letter-spacing:.13em;color:var(--wild-teal)}.wildernet-page .connection-node strong{font-size:17px;color:#edf0ed}.wildernet-page .connection-node small{font-size:10px;line-height:1.6;color:#b8c4c9}
+.wildernet-page .connection-core{max-width:420px;margin:0 auto 28px;text-align:center;border-color:rgba(214,169,109,.55);padding:24px}.wildernet-page .connection-core strong{font-size:23px;letter-spacing:.04em;color:var(--wild-accent)}
+.wildernet-page .connection-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;position:relative;padding-top:22px}.wildernet-page .connection-branches:before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:1px solid rgba(142,182,177,.5)}.wildernet-page .connection-caption{margin:20px 0 0;text-align:center;color:#aebbc1;font-size:10px;line-height:1.6}
+.wildernet-page .wildernet-universe-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:32px 0}.wildernet-page .wildernet-universe-grid article{padding:23px;border:1px solid var(--line);background:var(--panel)}.wildernet-page .wildernet-universe-grid article span{font:9px var(--font-meta);letter-spacing:.13em;color:var(--wild-teal)}.wildernet-page .wildernet-universe-grid h3{margin:17px 0 8px;font-size:20px}.wildernet-page .wildernet-universe-grid p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.wildernet-page .wildernet-universe-links{display:flex;flex-wrap:wrap;gap:10px 24px;padding:22px 0;border-block:1px solid var(--line)}.wildernet-page .wildernet-universe-links a{color:var(--wild-accent);font:10px var(--font-meta);letter-spacing:.08em}.wildernet-page .wildernet-universe-links a:hover{color:var(--wild-teal)}
+@media(max-width:600px){.wildernet-page .wildernet-explore-nav a{padding:13px 9px;font-size:7px;letter-spacing:.08em}.wildernet-page .wildernet-faction-art{height:165px}.wildernet-page .wildernet-universe-grid,.wildernet-page .connection-branches{grid-template-columns:1fr}.wildernet-page .connection-branches:before{display:none}}
