@@ -34,3 +34,18 @@
 .component-card p{font-size:12px;line-height:1.7;margin:0}
 .article-back{max-width:1040px;margin:55px auto 0}
 @media(max-width:520px){.component-grid{grid-template-columns:1fr}.article-figure{padding:12px}.article-body .article-callout{padding:18px}}
+
+/* Stage 4 — visual timelines for hardware and operating-system history */
+.history-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:30px 0 38px}
+.history-gallery figure{margin:0;min-width:0;border:1px solid var(--border);background:var(--surface);overflow:hidden}
+.history-gallery figure:first-child:nth-last-child(3),.history-gallery figure:first-child:nth-last-child(3)~figure{grid-column:span 1}
+.history-gallery img{display:block;width:100%;height:clamp(150px,22vw,230px);object-fit:contain;background:var(--panel);padding:10px;transition:transform .35s ease}
+.history-gallery figure:hover img{transform:scale(1.025)}
+.history-gallery figcaption{padding:12px 14px 14px;color:var(--muted);font-size:11px;line-height:1.6}
+.history-gallery figcaption strong{display:block;color:var(--text);font-size:12px;margin-bottom:4px}
+.history-gallery figcaption small{display:block;margin-top:8px;font-size:9px;letter-spacing:.03em}
+.history-gallery figcaption a,.image-credit a{color:var(--sub-accent);text-decoration:none}
+.history-gallery figcaption a:hover,.image-credit a:hover{text-decoration:underline}
+.image-credit{max-width:1040px;margin:-25px auto 36px;color:var(--muted);font-size:10px;line-height:1.6}
+@media(max-width:520px){.history-gallery{grid-template-columns:1fr}.history-gallery img{height:210px}}
+@media(prefers-reduced-motion:reduce){.history-gallery img{transition:none}}
