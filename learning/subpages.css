@@ -19,3 +19,18 @@
 @media(max-width:760px){.learning-subpage{padding:48px 22px 76px}.sub-hero{grid-template-columns:1fr;gap:25px;margin-bottom:55px}.sub-hero-image{min-height:260px}.sub-section{margin-bottom:55px}.sub-section-head{display:block}.sub-section-head>p{margin-top:14px}.article-layout{grid-template-columns:1fr}.article-aside{order:-1}.resource-item{grid-template-columns:85px minmax(0,1fr)}.resource-item>a{grid-column:2}.log-entry{grid-template-columns:1fr;gap:8px}}
 @media(max-width:520px){.learning-subpage{padding-inline:18px}.sub-topic-grid{grid-template-columns:1fr}.sub-investigation{grid-template-columns:30px minmax(0,1fr) auto;gap:11px}.sub-hero h1{font-size:52px}.resource-item{grid-template-columns:1fr;gap:8px}.resource-item>a{grid-column:1}}
 @media(prefers-reduced-motion:reduce){.sub-topic,.sub-hero-image img{transition:none}}
+
+
+/* Stage 3 — richer investigation article components */
+.article-body .article-callout{margin:28px 0;padding:22px 24px;background:var(--panel);border-left:2px solid var(--sub-accent)}
+.article-body .article-callout strong{display:block;color:var(--sub-accent);font:10px var(--font-meta);letter-spacing:.13em;text-transform:uppercase}
+.article-body .article-callout p{margin:9px 0 0;color:var(--muted)}
+.article-figure{margin:30px 0;padding:20px;background:var(--panel);border:1px solid var(--border)}
+.article-figure svg{display:block;width:100%;height:auto;max-height:390px;color:var(--text)}
+.article-figure figcaption{margin-top:12px;color:var(--muted);font-size:11px;line-height:1.65}
+.component-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:25px 0}
+.component-card{padding:17px;border:1px solid var(--border);background:var(--surface)}
+.component-card b{display:block;color:var(--sub-accent);font:11px var(--font-meta);letter-spacing:.12em;margin-bottom:8px}
+.component-card p{font-size:12px;line-height:1.7;margin:0}
+.article-back{max-width:1040px;margin:55px auto 0}
+@media(max-width:520px){.component-grid{grid-template-columns:1fr}.article-figure{padding:12px}.article-body .article-callout{padding:18px}}
