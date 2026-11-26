@@ -857,3 +857,17 @@
 @media (prefers-reduced-motion:reduce) {
   .atlas-topic,.atlas-topic:hover { transition:none; }
 }
+
+
+/* Linked editorial cards in the Gaming field-notes trail */
+.atlas-gaming .atlas-rabbit a.text-link {
+  display:inline-block;
+  margin-top:auto;
+  padding-top:17px;
+  color:var(--destination-accent);
+  font:9px var(--font-meta);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.atlas-gaming .atlas-rabbit a.text-link:hover { color:var(--text); }
+.atlas-gaming .atlas-rabbit { min-height:255px; }
