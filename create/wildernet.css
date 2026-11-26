@@ -1,0 +1,92 @@
+/* The Wildernet project page — Stage 2. All rules scoped to .wildernet-page. */
+.wildernet-page { --wild-accent:#d6a96d; --wild-teal:#8eb6b1; overflow:hidden; }
+.wildernet-page .wildernet-hero { min-height:610px; display:grid; grid-template-columns:.92fr 1.08fr; align-items:center; max-width:1320px; margin:auto; padding:70px 30px 75px; gap:35px; }
+.wildernet-page .wildernet-hero-copy { position:relative; z-index:2; padding:20px 0; }
+.wildernet-page .wildernet-back { display:inline-block; margin-bottom:48px; color:var(--muted); font:10px var(--font-meta); letter-spacing:.13em; }
+.wildernet-page .wildernet-back:hover { color:var(--wild-accent); }
+.wildernet-page .wildernet-hero h1 { margin:0; font-size:clamp(62px,8.7vw,112px); line-height:.83; letter-spacing:-.075em; }
+.wildernet-page .wildernet-hero h1 em { display:inline-block; color:var(--wild-accent); font-family:var(--font-editorial); font-weight:500; letter-spacing:-.065em; }
+.wildernet-page .wildernet-period { color:var(--wild-teal); }
+.wildernet-page .wildernet-subtitle { margin:24px 0 13px; color:var(--wild-teal); font:11px var(--font-meta); letter-spacing:.25em; }
+.wildernet-page .wildernet-lede { max-width:480px; color:var(--muted); font-size:16px; line-height:1.85; }
+.wildernet-page .wildernet-hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin-top:30px; }
+.wildernet-page .wildernet-edition { color:var(--faint); font:9px var(--font-meta); letter-spacing:.1em; }
+.wildernet-page .wildernet-hero-image { min-height:490px; position:relative; overflow:hidden; background:#0b121a; }
+.wildernet-page .wildernet-hero-image img { width:100%; height:100%; min-height:490px; object-fit:cover; display:block; opacity:.78; }
+.wildernet-page .wildernet-hero-image:after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--bg) 0%,transparent 35%),linear-gradient(0deg,rgba(8,14,21,.5),transparent 45%); }
+.wildernet-page .wildernet-image-caption { position:absolute; z-index:2; right:22px; bottom:20px; color:#e5d3b8; font:9px var(--font-meta); letter-spacing:.17em; }
+.wildernet-page .wildernet-orbit { position:absolute; z-index:1; width:250px; height:110px; border:1px solid rgba(214,169,109,.45); border-radius:50%; transform:rotate(-24deg); }
+.wildernet-page .orbit-a { right:12%; top:24%; }.wildernet-page .orbit-b { right:3%; top:36%; width:310px; height:145px; border-color:rgba(142,182,177,.35); transform:rotate(28deg); }
+.wildernet-page .wildernet-signal { display:flex; justify-content:space-between; gap:20px; padding:15px max(30px,calc((100% - 1180px)/2)); background:#111c27; border-block:1px solid rgba(142,182,177,.2); color:#a9b8bf; font:9px var(--font-meta); letter-spacing:.14em; }
+.wildernet-page .wildernet-section { max-width:1180px; margin:auto; padding:clamp(70px,8vw,105px) 30px; }
+.wildernet-page .wildernet-intro { display:grid; grid-template-columns:.85fr 1.15fr; gap:65px; }
+.wildernet-page .wildernet-section-heading h2, .wildernet-page .wildernet-story h2, .wildernet-page .wildernet-world-copy h2, .wildernet-page .wildernet-behind h2 { margin:0; font-size:clamp(36px,4.6vw,58px); line-height:1.02; letter-spacing:-.055em; }
+.wildernet-page .wildernet-section-heading h2 em, .wildernet-page .wildernet-story h2 em, .wildernet-page .wildernet-world-copy h2 em, .wildernet-page .wildernet-behind h2 em { color:var(--wild-accent); }
+.wildernet-page .wildernet-prose { color:var(--muted); font-size:14px; line-height:1.95; }
+.wildernet-page .wildernet-prose p { margin-bottom:17px; }
+.wildernet-page .wildernet-prose .wildernet-lead { color:var(--text); font-size:18px; line-height:1.75; }
+.wildernet-page .wildernet-world-band { display:grid; grid-template-columns:1fr 1fr; background:#111c27; color:#edf0ed; border-block:1px solid rgba(142,182,177,.2); }
+.wildernet-page .wildernet-world-image { min-height:560px; overflow:hidden; }
+.wildernet-page .wildernet-world-image img { width:100%; height:100%; min-height:560px; display:block; object-fit:cover; opacity:.72; }
+.wildernet-page .wildernet-world-copy { align-self:center; padding:clamp(38px,6vw,82px); }
+.wildernet-page .wildernet-world-copy .eyebrow { color:var(--wild-accent); }
+.wildernet-page .wildernet-world-copy > p:not(.eyebrow) { color:#b8c4c9; font-size:13px; line-height:1.9; margin:20px 0 30px; }
+.wildernet-page .wildernet-facts { border-top:1px solid rgba(237,240,237,.17); }
+.wildernet-page .wildernet-facts > div { display:grid; grid-template-columns:110px 1fr; gap:4px 16px; padding:15px 0; border-bottom:1px solid rgba(237,240,237,.17); }
+.wildernet-page .wildernet-facts span { grid-row:span 2; align-self:start; color:var(--wild-accent); font:9px var(--font-meta); letter-spacing:.12em; }
+.wildernet-page .wildernet-facts strong { font-size:16px; }.wildernet-page .wildernet-facts p { margin:0; color:#aebbc1; font-size:11px; }
+.wildernet-page .wildernet-story { display:grid; grid-template-columns:1.05fr .95fr; gap:65px; align-items:center; }
+.wildernet-page .wildernet-story-art { position:relative; min-height:410px; overflow:hidden; background:#101820; }
+.wildernet-page .wildernet-story-art img { width:100%; height:100%; min-height:410px; display:block; object-fit:cover; opacity:.75; }
+.wildernet-page .wildernet-story-art span { position:absolute; left:22px; bottom:20px; color:#e7c18e; font:9px var(--font-meta); letter-spacing:.14em; }
+.wildernet-page .wildernet-story-copy > p:not(.eyebrow) { color:var(--muted); font-size:13px; line-height:1.9; }
+.wildernet-page .wildernet-story-copy > p strong { color:var(--text); }
+.wildernet-page .wildernet-spoiler-note { margin-top:23px; padding:15px 17px; border-left:2px solid var(--wild-teal); background:var(--bg-soft); font-size:11px !important; }
+.wildernet-page .wildernet-factions { padding:75px max(30px,calc((100% - 1180px)/2)) 95px; background:var(--bg-soft); border-block:1px solid var(--line); }
+.wildernet-page .wildernet-section-heading { max-width:1180px; margin:0 auto 32px; }
+.wildernet-page .wildernet-heading-aside { max-width:330px; margin:0 0 5px; color:var(--muted); font-size:12px; }
+.wildernet-page .wildernet-faction-grid { max-width:1180px; margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+.wildernet-page .wildernet-faction-grid article { min-height:210px; padding:25px; border:1px solid var(--line); background:var(--panel); }
+.wildernet-page .wildernet-faction-grid article > span { color:var(--wild-teal); font:9px var(--font-meta); letter-spacing:.14em; }
+.wildernet-page .wildernet-faction-grid h3 { margin:38px 0 8px; font-size:23px; }
+.wildernet-page .wildernet-faction-grid p { margin:0; color:var(--muted); font-size:12px; line-height:1.75; }
+.wildernet-page .wildernet-behind { display:grid; grid-template-columns:1fr 1fr; min-height:390px; background:#111c27; color:#edf0ed; }
+.wildernet-page .wildernet-behind-art { min-height:390px; overflow:hidden; }
+.wildernet-page .wildernet-behind-art img { width:100%; height:100%; min-height:390px; display:block; object-fit:cover; opacity:.65; }
+.wildernet-page .wildernet-behind-copy { align-self:center; max-width:640px; padding:clamp(38px,6vw,75px); }
+.wildernet-page .wildernet-behind-copy .eyebrow { color:var(--wild-accent); }
+.wildernet-page .wildernet-behind-copy > p:not(.eyebrow) { color:#b8c4c9; font-size:12px; line-height:1.9; }
+.wildernet-page .wildernet-status { display:flex; align-items:center; gap:10px; margin-top:25px; color:#d6a96d; font:9px var(--font-meta); letter-spacing:.13em; }
+.wildernet-page .status-pulse { width:7px; height:7px; border-radius:50%; background:#8eb6b1; box-shadow:0 0 0 4px rgba(142,182,177,.13); }
+.wildernet-page .wildernet-footer-note { padding:85px 20px 100px; text-align:center; }
+.wildernet-page .wildernet-footer-note h2 { margin:0 0 25px; font-size:clamp(38px,5vw,60px); letter-spacing:-.05em; }
+.wildernet-page .wildernet-footer-note h2 em { color:var(--wild-accent); }
+@media(max-width:850px) {
+ .wildernet-page .wildernet-hero { grid-template-columns:1fr; padding-top:48px; }
+ .wildernet-page .wildernet-hero-copy { padding-bottom:0; }
+ .wildernet-page .wildernet-back { margin-bottom:30px; }
+ .wildernet-page .wildernet-hero-image, .wildernet-page .wildernet-hero-image img { min-height:340px; max-height:430px; }
+ .wildernet-page .wildernet-hero-image:after { background:linear-gradient(0deg,rgba(8,14,21,.45),transparent 45%); }
+ .wildernet-page .wildernet-intro, .wildernet-page .wildernet-story { grid-template-columns:1fr; gap:28px; }
+ .wildernet-page .wildernet-world-band, .wildernet-page .wildernet-behind { grid-template-columns:1fr; }
+ .wildernet-page .wildernet-world-image, .wildernet-page .wildernet-world-image img { min-height:320px; max-height:400px; }
+ .wildernet-page .wildernet-behind-art, .wildernet-page .wildernet-behind-art img { min-height:300px; max-height:360px; }
+}
+@media(max-width:600px) {
+ .wildernet-page .wildernet-hero { padding:40px 20px 55px; gap:25px; }
+ .wildernet-page .wildernet-hero h1 { font-size:clamp(58px,16vw,82px); }
+ .wildernet-page .wildernet-lede { font-size:14px; }
+ .wildernet-page .wildernet-hero-image, .wildernet-page .wildernet-hero-image img { min-height:260px; }
+ .wildernet-page .wildernet-signal { flex-direction:column; gap:7px; padding:14px 20px; font-size:8px; }
+ .wildernet-page .wildernet-section { padding:65px 20px; }
+ .wildernet-page .wildernet-world-copy, .wildernet-page .wildernet-behind-copy { padding:42px 22px 50px; }
+ .wildernet-page .wildernet-factions { padding:65px 20px; }
+ .wildernet-page .wildernet-faction-grid { grid-template-columns:1fr; }
+ .wildernet-page .wildernet-faction-grid article { min-height:175px; }
+ .wildernet-page .wildernet-faction-grid h3 { margin-top:25px; }
+ .wildernet-page .wildernet-facts > div { grid-template-columns:90px 1fr; }
+ .wildernet-page .wildernet-story-art, .wildernet-page .wildernet-story-art img { min-height:270px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .wildernet-page * { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
+}
