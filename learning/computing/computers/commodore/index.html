@@ -1,1 +1,29 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Computing has moved</title><script>window.location.replace(window.location.pathname.replace('/learning/computing/','/technology/computing/'));</script></head><body><p>Computing now lives in <a href="/the-infinite-detour/technology/computing/">The Technology section</a>.</p></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Computing content has moved — The Infinite Detour</title><script>
+(function(){
+ const root='/the-infinite-detour';
+ const p=location.pathname.replace(/index\\.html$/,'').replace(/\\/*$/,'/');
+ const routes={
+ '/the-infinite-detour/technology/computing/':'/technology/',
+ '/the-infinite-detour/technology/computing/inside-the-machine/':'/technology/hardware/',
+ '/the-infinite-detour/technology/computing/computers/':'/technology/hardware/computers/',
+ '/the-infinite-detour/technology/computing/operating-systems/':'/technology/operating-systems/',
+ '/the-infinite-detour/technology/computing/software/':'/technology/software-applications/',
+ '/the-infinite-detour/technology/computing/programming/':'/technology/programming-development/',
+ '/the-infinite-detour/technology/computing/networks/':'/technology/networks-infrastructure/',
+ '/the-infinite-detour/technology/computing/games/':'/technology/hardware/games-that-shaped-computing/',
+ '/the-infinite-detour/technology/computing/retro-games/':'/technology/hardware/games-that-shaped-computing/',
+ '/the-infinite-detour/learning/computing/':'/technology/',
+ '/the-infinite-detour/learning/computing/computers/':'/technology/hardware/computers/',
+ '/the-infinite-detour/learning/computing/games/':'/technology/hardware/games-that-shaped-computing/',
+ '/the-infinite-detour/learning/computing/retro-games/':'/technology/hardware/games-that-shaped-computing/',
+ '/the-infinite-detour/learning/computing/networks/':'/technology/networks-infrastructure/',
+ '/the-infinite-detour/learning/computing/operating-systems/':'/technology/operating-systems/',
+ '/the-infinite-detour/learning/computing/programming/':'/technology/programming-development/',
+ '/the-infinite-detour/learning/computing/software/':'/technology/software-applications/'
+ };
+ const family=p.match(/\\/(?:technology|learning)\\/computing\\/computers\\/([^/]+)\\/$/);
+ let target=routes[p];
+ if(family) target='/technology/hardware/computers/'+family[1]+'/';
+ if(target) location.replace(root+target);
+})();
+</script></head><body><main><h1>This computing page has moved</h1><p>The Technology section has been reorganised. <a href="/the-infinite-detour/technology/">Visit the Digital Observatory</a> to find the updated material.</p></main></body></html>
