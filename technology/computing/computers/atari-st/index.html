@@ -1,7 +1,10 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Computing content has moved — The Infinite Detour</title><script>
 (function(){
  const root='/the-infinite-detour';
- const p=location.pathname.replace(/index\\.html$/,'').replace(/\\/*$/,'/');
+ let p=location.pathname;
+ if(p.endsWith('index.html'))p=p.slice(0,-10);
+ while(p.endsWith('//'))p=p.slice(0,-1);
+ if(!p.endsWith('/'))p+='/';
  const routes={
  '/the-infinite-detour/technology/computing/':'/technology/',
  '/the-infinite-detour/technology/computing/inside-the-machine/':'/technology/hardware/',
@@ -21,9 +24,10 @@
  '/the-infinite-detour/learning/computing/programming/':'/technology/programming-development/',
  '/the-infinite-detour/learning/computing/software/':'/technology/software-applications/'
  };
- const family=p.match(/\\/(?:technology|learning)\\/computing\\/computers\\/([^/]+)\\/$/);
+ const parts=p.split('/').filter(Boolean);
  let target=routes[p];
- if(family) target='/technology/hardware/computers/'+family[1]+'/';
- if(target) location.replace(root+target);
+ const ci=parts.indexOf('computing');
+ if(!target&&ci>=0&&parts[ci+1]==='computers'&&parts[ci+2])target='/technology/hardware/computers/'+parts[ci+2]+'/';
+ if(target)location.replace(root+target);
 })();
 </script></head><body><main><h1>This computing page has moved</h1><p>The Technology section has been reorganised. <a href="/the-infinite-detour/technology/">Visit the Digital Observatory</a> to find the updated material.</p></main></body></html>
