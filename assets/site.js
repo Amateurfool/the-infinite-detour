@@ -34,6 +34,26 @@
     applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
   });
 
+  // Keep the shared site navigation in sync as new top-level sections are added.
+  const faithPath = '/the-infinite-detour/faith/';
+  const isFaithPage = window.location.pathname.startsWith(faithPath);
+  [document.querySelector('.desktop-nav'), document.querySelector('#mobile-nav')].forEach(nav => {
+    if (!nav || nav.querySelector('a[href="' + faithPath + '"]')) return;
+    const link = document.createElement('a');
+    link.href = faithPath;
+    link.textContent = 'Faith';
+    if (isFaithPage) link.classList.add('active');
+    if (nav.id === 'mobile-nav') link.addEventListener('click', () => {
+      const button = document.querySelector('.menu-toggle');
+      if (button) {
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-label', 'Open navigation');
+      }
+      nav.hidden = true;
+    });
+    nav.appendChild(link);
+  });
+
   const menuButton = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('#mobile-nav');
   const closeMenu = () => {
