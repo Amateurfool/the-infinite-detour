@@ -28,7 +28,7 @@ jobs:
       - name: Prepare website files
         run: |
           mkdir -p public
-          cp -R about adhd assets create explore learning technology journal index.html 404.html favicon.svg public/
+          cp -R about adhd assets create explore faith learning technology journal index.html 404.html favicon.svg public/
           touch public/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
